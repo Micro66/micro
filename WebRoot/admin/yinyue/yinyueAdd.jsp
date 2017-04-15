@@ -88,7 +88,6 @@
                         <td>
                             <select name="catelogId" id="catelogId" onclick="findAllCatelog()">
                                 <option value="0">--请选择类别--</option>
-                                <option value="1" id="1">1</option>
                             </select>
                         </td>
                         <td>
