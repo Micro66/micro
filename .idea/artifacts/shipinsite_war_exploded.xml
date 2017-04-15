@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="shipinsite:war exploded">
+    <output-path>$PROJECT_DIR$/WebRoot</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="shipinsite" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="shipinsite/web/Web" />
+      <element id="javaee-facet-resources" facet="shipinsite/javaeeApplication/javaEEApplication" />
+    </root>
+  </artifact>
+</component>
