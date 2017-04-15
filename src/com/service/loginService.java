@@ -50,7 +50,7 @@ public class loginService
 		
 		String result="no";
 		
-		if(userType==0)//ÏµÍ³¹ÜÀíÔ±µÇÂ½
+		if(userType==0)//ç³»ç»Ÿç®¡ç†å‘˜ç™»é™†
 		{
 			String sql="from TAdmin where userName=? and userPw=?";
 			Object[] con={userName,userPw};
@@ -69,11 +69,11 @@ public class loginService
 	             result="yes";
 			}
 		}
-		if(userType==1)//ÀÏÊ¦µÇÂ½
+		if(userType==1)//è€å¸ˆç™»é™†
 		{
 			
 		}
-		if(userType==2)//Ñ§ÉúµÇÂ½
+		if(userType==2)//å­¦ç”Ÿç™»é™†
 		{
 			
 		}

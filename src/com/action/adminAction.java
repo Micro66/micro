@@ -29,7 +29,7 @@ public class adminAction extends ActionSupport
 		admin.setUserName(userName);
 		admin.setUserPw(userPw);
 		adminDAO.save(admin);
-		this.setMessage("²Ù×÷³É¹¦");
+		this.setMessage("æ“ä½œæˆåŠŸ");
 		this.setPath("adminManage.action");
 		return "succeed";
 	}
@@ -53,12 +53,12 @@ public class adminAction extends ActionSupport
 		List adminListFenye = adminList.subList(fromIndex, toIndex);
 
 
-		Pagination p = new Pagination();//´´½¨ ·ÖÒ³¶ÔÏó
-		p.setIndex(index);//ÉèÖÃÒ³Êı
+		Pagination p = new Pagination();//åˆ›å»º åˆ†é¡µå¯¹è±¡
+		p.setIndex(index);//è®¾ç½®é¡µæ•°
 		p.setPageSize(pageSize);
-		p.setTotle(adminList.size());//ÉèÖÃ×Ü¹²µÄÌõÊı
-		p.setData(adminListFenye);//ÉèÖÃÊı¾İ
-		p.setPath("adminManageFenye.action?");//Ìø×ªµÄÂ·¾¶
+		p.setTotle(adminList.size());//è®¾ç½®æ€»å…±çš„æ¡æ•°
+		p.setData(adminListFenye);//è®¾ç½®æ•°æ®
+		p.setPath("adminManageFenye.action?");//è·³è½¬çš„è·¯å¾„
 
 		Map request=(Map)ServletActionContext.getContext().get("request");
 		request.put("page", p);
@@ -68,7 +68,7 @@ public class adminAction extends ActionSupport
 	public String adminDel()
 	{
 		adminDAO.delete(adminDAO.findById(userId));
-		this.setMessage("É¾³ı³É¹¦");
+		this.setMessage("åˆ é™¤æˆåŠŸ");
 		this.setPath("adminManage.action");
 		return "succeed";
 	}
