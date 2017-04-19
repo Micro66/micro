@@ -114,9 +114,9 @@ String path = request.getContextPath();
 	        <dd style='display:block' class='sitem' id='items2_1'>
 	          <ul class='sitemu'>
 	            <li><a href='<%=path %>/catelogMana.action' target='main'>视频分类</a> </li>
-	            <li><a href='<%=path %>/yinyueMana.action' target='main'>视频管理</a> </li>
-	            <li><a href='<%=path %>/yinyueShenqingMana.action' target='main'>视频审批管理</a> </li>
-	            <li><a href='<%=path %>/admin/yinyue/yinyueAdd.jsp' target='main'>视频添加</a> </li>
+	            <li><a href='<%=path %>/shipinMana.action' target='main'>视频管理</a> </li>
+	            <li><a href='<%=path %>/shipinShenqingMana.action' target='main'>视频审批管理</a> </li>
+	            <li><a href='<%=path %>/admin/shipin/shipinAdd.jsp' target='main'>视频添加</a> </li>
 	          </ul>
 	        </dd>
 	      </dl>

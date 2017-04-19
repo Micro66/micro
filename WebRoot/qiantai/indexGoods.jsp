@@ -161,7 +161,7 @@
 						</div>
 						<div class="list_content">
 							<div id="div">
-								<s:action name="yinyuePaihang" executeResult="true" flush="true"></s:action>
+								<s:action name="shipinPaihang" executeResult="true" flush="true"></s:action>
 							</div>
 						</div>
 					</div>

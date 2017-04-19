@@ -32,7 +32,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	            </s:if>
 	            
 	            <s:else>
-	                var url="<%=path %>/qiantai/yinyue/yinyueAdd.jsp";
+	                var url="<%=path %>/qiantai/shipin/shipinAdd.jsp";
 	                var n="";
 	                var w="480px";
 	                var h="500px";
@@ -79,7 +79,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</li>
 			</ul>
 		</div>
-		<form id="searchForm" action="<%=path %>/yinyueSearch.action" method="post">
+		<form id="searchForm" action="<%=path %>/shipinSearch.action" method="post">
 			<div class="topsearch">
 				<div class="title"></div>
 				<div id="page_search_left">

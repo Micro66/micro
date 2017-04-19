@@ -1,19 +1,18 @@
 package com.action;
 
-import java.util.List;
-import java.util.Map;
-
-import org.apache.struts2.ServletActionContext;
-
 import com.dao.TCatelogDAO;
-import com.dao.TYinyueDAO;
+import com.dao.TShipinDAO;
 import com.model.TCatelog;
 import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ServletActionContext;
+
+import java.util.List;
+import java.util.Map;
 
 public class indexAction extends ActionSupport
 {
 	private TCatelogDAO catelogDAO;
-	private TYinyueDAO yinyueDAO;
+	private TShipinDAO shipinDAO;
 	
 	public String index()
 	{
@@ -23,9 +22,9 @@ public class indexAction extends ActionSupport
 		for(int i=0;i<cateLogList.size();i++)
 		{
 			TCatelog catelog=(TCatelog)cateLogList.get(i);
-			String sql1="from TYinyue where del='no' and catelogId="+catelog.getCatelogId();
-			List yinyueList=yinyueDAO.getHibernateTemplate().find(sql1);
-			catelog.setYinyueList(yinyueList);
+			String sql1="from TShipin where del='no' and catelogId="+catelog.getCatelogId();
+			List shipinList=shipinDAO.getHibernateTemplate().find(sql1);
+			catelog.setShipinList(shipinList);
 		}
 		
 		request.put("cateLogList", cateLogList);
@@ -42,14 +41,14 @@ public class indexAction extends ActionSupport
 		this.catelogDAO = catelogDAO;
 	}
 
-	public TYinyueDAO getYinyueDAO()
+	public TShipinDAO getShipinDAO()
 	{
-		return yinyueDAO;
+		return shipinDAO;
 	}
 
-	public void setYinyueDAO(TYinyueDAO yinyueDAO)
+	public void setShipinDAO(TShipinDAO shipinDAO)
 	{
-		this.yinyueDAO = yinyueDAO;
+		this.shipinDAO = shipinDAO;
 	}
 
 }

@@ -18,12 +18,6 @@ String path = request.getContextPath();
 		<script language="JavaScript" src="<%=path %>/js/public.js" type="text/javascript"></script>
 		
         <script language="javascript">
-           function yinyueAdd()
-           {
-              var url="<%=path %>/admin/yinyue/yinyueAdd.jsp";
-              window.location.href=url;
-           }
-           
            function down1(fujianPath,fujianYuashiMing)
            {
                var url="<%=path %>/updown/updown.jsp?fujianPath="+fujianPath+"&fujianYuashiMing="+fujianYuashiMing;
@@ -46,34 +40,27 @@ String path = request.getContextPath();
 					<td width="25%">发布时间</td>
 					<td width="25%">操作</td>
 		        </tr>	
-				<s:iterator value="#request.yinyueList" id="yinyue">
+				<s:iterator value="#request.shipinList" id="shipin">
 				<tr align='center' bgcolor="#FFFFFF" onMouseMove="javascript:this.bgColor='red';" onMouseOut="javascript:this.bgColor='#FFFFFF';" height="22">
 					<td bgcolor="#FFFFFF" align="center">
-						 <s:property value="#yinyue.name"/>
+						 <s:property value="#shipin.name"/>
 					</td>
 					<td bgcolor="#FFFFFF" align="center">
-					     <s:property value="#yinyue.fujianYuanshiming"/>
-						 <a href="#" onclick="down1('<s:property value="#yinyue.fujian"/>','<s:property value="#yinyue.fujianYuanshiming"/>')" style="font-size: 11px;color: red">down</a>
+					     <s:property value="#shipin.fujianYuanshiming"/>
+						 <a href="#" onclick="down1('<s:property value="#shipin.fujian"/>','<s:property value="#shipin.fujianYuanshiming"/>')" style="font-size: 11px;color: red">down</a>
 					</td>
 					<td bgcolor="#FFFFFF" align="center">
-					    <s:property value="#yinyue.geshou"/>
+					    <s:property value="#shipin.geshou"/>
 					</td>
 					<td bgcolor="#FFFFFF" align="center">
-					    <s:property value="#yinyue.shijian"/>
+					    <s:property value="#shipin.shijian"/>
 					</td>
 					<td bgcolor="#FFFFFF" align="center">
-						<a class="pn-loperator" href="<%=path %>/yinyueDel.action?id=<s:property value="#yinyue.id"/>">删除</a>
+						<a class="pn-loperator" href="<%=path %>/shipinPiZhun.action?id=<s:property value="#shipin.id"/>">批准</a>
+						<a class="pn-loperator" href="<%=path %>/shipinDel.action?id=<s:property value="#shipin.id"/>">删除</a>
 					</td>
 				</tr>
 				</s:iterator>
 			</table>
-			
-			<table width='98%'  border='0'style="margin-top:8px;margin-left: 5px;">
-			  <tr>
-			    <td>
-			      <input type="button" value="添加" style="width: 80px;" onclick="yinyueAdd()" />
-			    </td>
-			  </tr>
-		    </table>
 	</body>
 </html>

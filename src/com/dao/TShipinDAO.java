@@ -1,24 +1,25 @@
 package com.dao;
 
-import java.util.List;
+import com.model.TShipin;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.LockMode;
 import org.springframework.context.ApplicationContext;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
-import com.model.TYinyue;
+import java.util.List;
+
 
 /**
- * Data access object (DAO) for domain model class TYinyue.
+ * Data access object (DAO) for domain model class TShipin.
  * 
- * @see com.model.TYinyue
+ * @see com.model.TShipin
  * @author MyEclipse Persistence Tools
  */
 
-public class TYinyueDAO extends HibernateDaoSupport
+public class TShipinDAO extends HibernateDaoSupport
 {
-	private static final Log log = LogFactory.getLog(TYinyueDAO.class);
+	private static final Log log = LogFactory.getLog(TShipinDAO.class);
 
 	// property constants
 	public static final String CATELOG_ID = "catelogId";
@@ -42,9 +43,9 @@ public class TYinyueDAO extends HibernateDaoSupport
 		// do nothing
 	}
 
-	public void save(TYinyue transientInstance)
+	public void save(TShipin transientInstance)
 	{
-		log.debug("saving TYinyue instance");
+		log.debug("saving TShipin instance");
 		try
 		{
 			getHibernateTemplate().save(transientInstance);
@@ -56,9 +57,9 @@ public class TYinyueDAO extends HibernateDaoSupport
 		}
 	}
 
-	public void delete(TYinyue persistentInstance)
+	public void delete(TShipin persistentInstance)
 	{
-		log.debug("deleting TYinyue instance");
+		log.debug("deleting TShipin instance");
 		try
 		{
 			getHibernateTemplate().delete(persistentInstance);
@@ -70,13 +71,13 @@ public class TYinyueDAO extends HibernateDaoSupport
 		}
 	}
 
-	public TYinyue findById(java.lang.Integer id)
+	public TShipin findById(java.lang.Integer id)
 	{
-		log.debug("getting TYinyue instance with id: " + id);
+		log.debug("getting TShipin instance with id: " + id);
 		try
 		{
-			TYinyue instance = (TYinyue) getHibernateTemplate().get(
-					"com.model.TYinyue", id);
+			TShipin instance = (TShipin) getHibernateTemplate().get(
+					"com.model.TShipin", id);
 			return instance;
 		} catch (RuntimeException re)
 		{
@@ -85,9 +86,9 @@ public class TYinyueDAO extends HibernateDaoSupport
 		}
 	}
 
-	public List findByExample(TYinyue instance)
+	public List findByExample(TShipin instance)
 	{
-		log.debug("finding TYinyue instance by example");
+		log.debug("finding TShipin instance by example");
 		try
 		{
 			List results = getHibernateTemplate().findByExample(instance);
@@ -103,11 +104,11 @@ public class TYinyueDAO extends HibernateDaoSupport
 
 	public List findByProperty(String propertyName, Object value)
 	{
-		log.debug("finding TYinyue instance with property: " + propertyName
+		log.debug("finding TShipin instance with property: " + propertyName
 				+ ", value: " + value);
 		try
 		{
-			String queryString = "from TYinyue as model where model."
+			String queryString = "from TShipin as model where model."
 					+ propertyName + "= ?";
 			return getHibernateTemplate().find(queryString, value);
 		} catch (RuntimeException re)
@@ -159,10 +160,10 @@ public class TYinyueDAO extends HibernateDaoSupport
 
 	public List findAll()
 	{
-		log.debug("finding all TYinyue instances");
+		log.debug("finding all TShipin instances");
 		try
 		{
-			String queryString = "from TYinyue";
+			String queryString = "from TShipin";
 			return getHibernateTemplate().find(queryString);
 		} catch (RuntimeException re)
 		{
@@ -171,12 +172,12 @@ public class TYinyueDAO extends HibernateDaoSupport
 		}
 	}
 
-	public TYinyue merge(TYinyue detachedInstance)
+	public TShipin merge(TShipin detachedInstance)
 	{
-		log.debug("merging TYinyue instance");
+		log.debug("merging TShipin instance");
 		try
 		{
-			TYinyue result = (TYinyue) getHibernateTemplate().merge(
+			TShipin result = (TShipin) getHibernateTemplate().merge(
 					detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -187,9 +188,9 @@ public class TYinyueDAO extends HibernateDaoSupport
 		}
 	}
 
-	public void attachDirty(TYinyue instance)
+	public void attachDirty(TShipin instance)
 	{
-		log.debug("attaching dirty TYinyue instance");
+		log.debug("attaching dirty TShipin instance");
 		try
 		{
 			getHibernateTemplate().saveOrUpdate(instance);
@@ -201,9 +202,9 @@ public class TYinyueDAO extends HibernateDaoSupport
 		}
 	}
 
-	public void attachClean(TYinyue instance)
+	public void attachClean(TShipin instance)
 	{
-		log.debug("attaching clean TYinyue instance");
+		log.debug("attaching clean TShipin instance");
 		try
 		{
 			getHibernateTemplate().lock(instance, LockMode.NONE);
@@ -215,8 +216,8 @@ public class TYinyueDAO extends HibernateDaoSupport
 		}
 	}
 
-	public static TYinyueDAO getFromApplicationContext(ApplicationContext ctx)
+	public static TShipinDAO getFromApplicationContext(ApplicationContext ctx)
 	{
-		return (TYinyueDAO) ctx.getBean("TYinyueDAO");
+		return (TShipinDAO) ctx.getBean("TShipinDAO");
 	}
 }

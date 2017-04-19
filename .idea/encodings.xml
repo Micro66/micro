@@ -8,7 +8,7 @@
     <file url="file://$PROJECT_DIR$/src/com/action/indexAction.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/action/indexZJAction.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/action/liuyanAction.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/com/action/yinyueAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/action/shipinAction.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/service/loginService.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/com/util/Pagination.java" charset="GB2312" />
     <file url="file://$PROJECT_DIR$/src/com/util/Util.java" charset="GB2312" />

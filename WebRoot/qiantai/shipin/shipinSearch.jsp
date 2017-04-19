@@ -32,10 +32,10 @@
 						</div>
 						<div id="tw" class="list_content">
 							<table width="100%">
-							     <s:iterator value="#request.yinyueList" id="yinyue">
+							     <s:iterator value="#request.shipinList" id="shipin">
 							          <tr>
-									       <td width="70%" height="22" align="left"><a href="<%=path %>/yinyueDetailQian.action?id=<s:property value="#yinyue.id"/>"><s:property value="#yinyue.name"/></a></td>
-									       <td width="30%" height="22" align="left"><s:property value="#yinyue.shijian"/></td>
+									       <td width="70%" height="22" align="left"><a href="<%=path %>/shipinDetailQian.action?id=<s:property value="#shipin.id"/>"><s:property value="#shipin.name"/></a></td>
+									       <td width="30%" height="22" align="left"><s:property value="#shipin.shijian"/></td>
 									  </tr>
 							     </s:iterator>
 							</table>
@@ -61,7 +61,7 @@
 				        <div class="list_bar">视频排行榜</div>
 				        <div class="list_content">
 				            <div id="div"> 
-								<s:action name="yinyuePaihang" executeResult="true" flush="true"></s:action>
+								<s:action name="shipinPaihang" executeResult="true" flush="true"></s:action>
 					        </div>
 					    </div>
 				    </div>

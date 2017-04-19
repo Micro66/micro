@@ -14,8 +14,8 @@
 
 	<body>
 		 <table width="100%" cellpadding="0" cellspacing="0" border="0">
-		     <s:iterator value="#request.yinyueList" id="yinyue">
-		          <tr><td height="28" id="roll-line-1607838439" width="100%"><div class="" style="padding:2px 0px;"><div class="f-left"><img src="<%=path %>/img/head-mark3.gif" align="middle" class="img-vm" border="0"/> <a href="<%=path %>/yinyueDetailQian.action?id=<s:property value="#yinyue.id"/>" title=""><span style=""><s:property value="#yinyue.name"/>(CTR：<font color="red"><s:property value="#yinyue.userId"/></font>)</span></a></div><div class="clear"></div></div></td></tr>
+		     <s:iterator value="#request.shipinList" id="shipin">
+		          <tr><td height="28" id="roll-line-1607838439" width="100%"><div class="" style="padding:2px 0px;"><div class="f-left"><img src="<%=path %>/img/head-mark3.gif" align="middle" class="img-vm" border="0"/> <a href="<%=path %>/shipinDetailQian.action?id=<s:property value="#shipin.id"/>" title=""><span style=""><s:property value="#shipin.name"/>(CTR：<font color="red"><s:property value="#shipin.userId"/></font>)</span></a></div><div class="clear"></div></div></td></tr>
 		     </s:iterator>
 		 </table>
 	</body>

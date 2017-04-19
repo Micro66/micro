@@ -41,8 +41,8 @@
 		        <div class="left_row">
 		            <div class="list pic_news">
 		  	                <div class="list_bar">&nbsp;</div>
-						  	<div class="ctitle ctitle1"><s:property value="#request.yinyue.name"/></div>
-							<div class="ctitleinfo"><s:property value="#request.yinyue.shijian"/>&nbsp;&nbsp;&nbsp;</div>
+						  	<div class="ctitle ctitle1"><s:property value="#request.shipin.name"/></div>
+							<div class="ctitleinfo"><s:property value="#request.shipin.shijian"/>&nbsp;&nbsp;&nbsp;</div>
 							<div class="pbox">
 							    <object id="player" height="400" width="650" classid="CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6">
 									<param NAME="AutoStart" VALUE="-1">
@@ -53,7 +53,7 @@
 									<!--播放器是否可人为控制-->
 									<param NAME="EnableContextMenu" VALUE="-1">
 									<!--是否启用上下文菜单-->
-									<param NAME="url" VALUE="/musicSite/<s:property value="#request.yinyue.fujian"/>">
+									<param NAME="url" VALUE="/musicSite/<s:property value="#request.shipin.fujian"/>">
 									<!--播放的文件地址-->
 									<param NAME="PlayCount" VALUE="1">
 									<!--播放次数控制,为整数-->
@@ -92,7 +92,7 @@
 								</object>
                             </div>
                             <div class="ctitleinfo">
-                                 <a href="#" onclick="down1('<s:property value="#request.yinyue.fujian"/>','<s:property value="#request.yinyue.fujianYuanshiming"/>')" style="font-size: 11px;color: red">下载</a>
+                                 <a href="#" onclick="down1('<s:property value="#request.shipin.fujian"/>','<s:property value="#request.shipin.fujianYuanshiming"/>')" style="font-size: 11px;color: red">下载</a>
                             </div>
 				            <div class="page_no">
 				                <div class="pg-3">
@@ -121,7 +121,7 @@
 				        <div class="list_bar">视频排行榜</div>
 				        <div class="list_content">
 				            <div id="div"> 
-								<s:action name="yinyuePaihang" executeResult="true" flush="true"></s:action>
+								<s:action name="shipinPaihang" executeResult="true" flush="true"></s:action>
 					        </div>
 					    </div>
 				    </div>

@@ -51,7 +51,7 @@
 			    <value>com/model/TLiuyan.hbm.xml</value>
 			    <value>com/model/TUser.hbm.xml</value>
 			    <value>com/model/TCatelog.hbm.xml</value>
-			    <value>com/model/TYinyue.hbm.xml</value>
+			    <value>com/model/TShipin.hbm.xml</value>
 			    <value>com/model/TGonggao.hbm.xml</value>
 			    <value>com/model/TGoods.hbm.xml</value>
 			    <value>com/model/TOrderItem.hbm.xml</value>
@@ -65,8 +65,8 @@
 	    <property name="catelogDAO">
 			<ref bean="TCatelogDAO" />
 		</property>
-		<property name="yinyueDAO">
-			<ref bean="TYinyueDAO" />
+		<property name="shipinDAO">
+			<ref bean="TShipinDAO" />
 		</property>
 	</bean>
 	
@@ -145,14 +145,14 @@
 	
 	
 	
-	<bean id="TYinyueDAO" class="com.dao.TYinyueDAO">
+	<bean id="TShipinDAO" class="com.dao.TShipinDAO">
 		<property name="sessionFactory">
 			<ref bean="sessionFactory" />
 		</property>
 	</bean>
-	<bean id="yinyueAction" class="com.action.yinyueAction" scope="prototype">
-		<property name="yinyueDAO">
-			<ref bean="TYinyueDAO" />
+	<bean id="shipinAction" class="com.action.shipinAction" scope="prototype">
+		<property name="shipinDAO">
+			<ref bean="TShipinDAO" />
 		</property>
 	</bean>
 	

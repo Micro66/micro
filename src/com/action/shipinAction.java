@@ -1,17 +1,15 @@
 package com.action;
 
+import com.dao.TCatelogDAO;
+import com.dao.TShipinDAO;
+import com.model.TShipin;
+import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.ServletActionContext;
+
 import java.util.List;
 import java.util.Map;
 
-import org.apache.struts2.ServletActionContext;
-
-import com.dao.TCatelogDAO;
-import com.dao.TYinyueDAO;
-import com.model.TCatelog;
-import com.model.TYinyue;
-import com.opensymphony.xwork2.ActionSupport;
-
-public class yinyueAction extends ActionSupport
+public class shipinAction extends ActionSupport
 {
 	private int id;
 	private int catelogId;
@@ -29,123 +27,123 @@ public class yinyueAction extends ActionSupport
 	private String path;
 
 	private TCatelogDAO catelogDAO;
-	private TYinyueDAO yinyueDAO;
+	private TShipinDAO shipinDAO;
 
 
 
-	public String yinyueAdd()
+	public String shipinAdd()
 	{
-		TYinyue yinyue=new TYinyue();
-		yinyue.setCatelogId(catelogId);
-		yinyue.setName(name);
-		yinyue.setFujian(fujian);
-		yinyue.setFujianYuanshiming(fujianYuanshiming);
-		yinyue.setGeshou(geshou);
-		yinyue.setShijian(shijian);
-		yinyue.setUserId(userId);//dianjilv
-		yinyue.setDel("no");
-		yinyueDAO.save(yinyue);
+		TShipin shipin=new TShipin();
+		shipin.setCatelogId(catelogId);
+		shipin.setName(name);
+		shipin.setFujian(fujian);
+		shipin.setFujianYuanshiming(fujianYuanshiming);
+		shipin.setGeshou(geshou);
+		shipin.setShijian(shijian);
+		shipin.setUserId(userId);//dianjilv
+		shipin.setDel("no");
+		shipinDAO.save(shipin);
 		this.setMessage("操作成功");
-		this.setPath("yinyueMana.action");
+		this.setPath("shipinMana.action");
 		return "succeed";
 	}
 
-	public String yinyueAdd1()
+	public String shipinAdd1()
 	{
-		TYinyue yinyue=new TYinyue();
-		yinyue.setCatelogId(catelogId);
-		yinyue.setName(name);
-		yinyue.setFujian(fujian);
-		yinyue.setFujianYuanshiming(fujianYuanshiming);
-		yinyue.setGeshou(geshou);
-		yinyue.setShijian(shijian);
-		yinyue.setUserId(userId);//dianjilv
-		yinyue.setDel("shenqing");
-		yinyueDAO.save(yinyue);
+		TShipin shipin=new TShipin();
+		shipin.setCatelogId(catelogId);
+		shipin.setName(name);
+		shipin.setFujian(fujian);
+		shipin.setFujianYuanshiming(fujianYuanshiming);
+		shipin.setGeshou(geshou);
+		shipin.setShijian(shijian);
+		shipin.setUserId(userId);//dianjilv
+		shipin.setDel("shenqing");
+		shipinDAO.save(shipin);
 		this.setMessage("操作成功");
 		return "succeed";
 	}
-	public String yinyueShenqingMana()
+	public String shipinShenqingMana()
 	{
-		String sql="from TYinyue where del='shenqing'";
-		List yinyueList=yinyueDAO.getHibernateTemplate().find(sql);
+		String sql="from TShipin where del='shenqing'";
+		List shipinList=shipinDAO.getHibernateTemplate().find(sql);
 		Map request=(Map)ServletActionContext.getContext().get("request");
-		request.put("yinyueList", yinyueList);
+		request.put("shipinList", shipinList);
 		return ActionSupport.SUCCESS;
 	}
 
 
-	public String yinyuePiZhun()
+	public String shipinPiZhun()
 	{
-		TYinyue yinyue=yinyueDAO.findById(id);
-		yinyue.setDel("no");
-		yinyueDAO.attachDirty(yinyue);
+		TShipin shipin=shipinDAO.findById(id);
+		shipin.setDel("no");
+		shipinDAO.attachDirty(shipin);
 		this.setMessage("操作成功");
-		this.setPath("yinyueMana.action");
+		this.setPath("shipinMana.action");
 		return "succeed";
 	}
 
 
-	public String yinyueMana()
+	public String shipinMana()
 	{
-		String sql="from TYinyue where del='no'";
-		List yinyueList=yinyueDAO.getHibernateTemplate().find(sql);
+		String sql="from TShipin where del='no'";
+		List shipinList=shipinDAO.getHibernateTemplate().find(sql);
 		Map request=(Map)ServletActionContext.getContext().get("request");
-		request.put("yinyueList", yinyueList);
+		request.put("shipinList", shipinList);
 		return ActionSupport.SUCCESS;
 	}
 
-	public String yinyueDel()
+	public String shipinDel()
 	{
-		TYinyue yinyue=yinyueDAO.findById(id);
-		yinyue.setDel("yes");
-		yinyueDAO.attachDirty(yinyue);
+		TShipin shipin=shipinDAO.findById(id);
+		shipin.setDel("yes");
+		shipinDAO.attachDirty(shipin);
 		this.setMessage("操作成功");
-		this.setPath("yinyueMana.action");
+		this.setPath("shipinMana.action");
 		return "succeed";
 	}
 
-	public String yinyueDetailQian()
+	public String shipinDetailQian()
 	{
-		TYinyue yinyue=yinyueDAO.findById(id);
-		yinyue.setUserId(yinyue.getUserId()+1);
-		yinyueDAO.attachDirty(yinyue);
+		TShipin shipin=shipinDAO.findById(id);
+		shipin.setUserId(shipin.getUserId()+1);
+		shipinDAO.attachDirty(shipin);
 		Map request=(Map)ServletActionContext.getContext().get("request");
-		request.put("yinyue", yinyue);
+		request.put("shipin", shipin);
 		return ActionSupport.SUCCESS;
 	}
 
 
-	public String yinyueMoreByCatelog()
+	public String shipinMoreByCatelog()
 	{
-		String sql="from TYinyue where del='no' and catelogId="+catelogId;;
-		List yinyueList=yinyueDAO.getHibernateTemplate().find(sql);
+		String sql="from TShipin where del='no' and catelogId="+catelogId;;
+		List shipinList=shipinDAO.getHibernateTemplate().find(sql);
 		Map request=(Map)ServletActionContext.getContext().get("request");
-		request.put("yinyueList", yinyueList);
+		request.put("shipinList", shipinList);
 		return ActionSupport.SUCCESS;
 	}
 
 
-	public String yinyueSearch()
+	public String shipinSearch()
 	{
-		StringBuffer sql=new StringBuffer("from TYinyue where del='no' and name like '%"+name+"%'" +" and geshou like '%"+geshou+"%'");
+		StringBuffer sql=new StringBuffer("from TShipin where del='no' and name like '%"+name+"%'" +" and geshou like '%"+geshou+"%'");
 		System.out.println(sql.toString());
-		List yinyueList=yinyueDAO.getHibernateTemplate().find(sql.toString());
+		List shipinList=shipinDAO.getHibernateTemplate().find(sql.toString());
 		Map request=(Map)ServletActionContext.getContext().get("request");
-		request.put("yinyueList", yinyueList);
+		request.put("shipinList", shipinList);
 		return ActionSupport.SUCCESS;
 	}
 
-	public String yinyuePaihang()
+	public String shipinPaihang()
 	{
-		String sql="from TYinyue where del='no' order by userId desc";
-		List yinyueList=yinyueDAO.getHibernateTemplate().find(sql);
-		if(yinyueList.size()>6)
+		String sql="from TShipin where del='no' order by userId desc";
+		List shipinList=shipinDAO.getHibernateTemplate().find(sql);
+		if(shipinList.size()>6)
 		{
-			yinyueList=yinyueList.subList(0, 6);
+			shipinList=shipinList.subList(0, 6);
 		}
 		Map request=(Map)ServletActionContext.getContext().get("request");
-		request.put("yinyueList", yinyueList);
+		request.put("shipinList", shipinList);
 		return ActionSupport.SUCCESS;
 	}
 
@@ -215,14 +213,14 @@ public class yinyueAction extends ActionSupport
 		return id;
 	}
 
-	public TYinyueDAO getYinyueDAO()
+	public TShipinDAO getShipinDAO()
 	{
-		return yinyueDAO;
+		return shipinDAO;
 	}
 
-	public void setYinyueDAO(TYinyueDAO yinyueDAO)
+	public void setShipinDAO(TShipinDAO shipinDAO)
 	{
-		this.yinyueDAO = yinyueDAO;
+		this.shipinDAO = shipinDAO;
 	}
 
 	public void setId(int id)

@@ -8,7 +8,6 @@ import java.util.Map;
 
 import org.apache.struts2.ServletActionContext;
 
-import com.dao.TCatelogDAO;
 import com.dao.TGoodsDAO;
 import com.dao.TOrderItemDAO;
 import com.model.TGoods;

@@ -30,7 +30,7 @@
                     <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
                     <video id="example_video_1" class="video-js" width="640" height="500" controls="controls"
                            preload="auto">
-                        <source src="<%=path %><s:property value="#request.yinyue.fujian"/>"
+                        <source src="<%=path %><s:property value="#request.shipin.fujian"/>"
                                 type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'/>
                         <!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
                         <object id="flash_fallback_1" class="vjs-flash-fallback" width="640" height="500"
@@ -39,7 +39,7 @@
                             <param name="movie" value="<%=path %>/css/flowplayer-3.2.1.swf"/>
                             <param name="allowfullscreen" value="true"/>
                             <param name="flashvars"
-                                   value='config={"playlist":["oceans-clip.png", {"url": "<%=path %>/<s:property value="#request.yinyue.fujian"/>","autoPlay":false,"autoBuffering":true}]}'/>
+                                   value='config={"playlist":["oceans-clip.png", {"url": "<%=path %>/<s:property value="#request.shipin.fujian"/>","autoPlay":false,"autoBuffering":true}]}'/>
                         </object>
                     </video>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="list_bar">视频排行榜</div>
                 <div class="list_content">
                     <div id="div">
-                        <s:action name="yinyuePaihang" executeResult="true" flush="true"></s:action>
+                        <s:action name="shipinPaihang" executeResult="true" flush="true"></s:action>
                     </div>
                 </div>
             </div>

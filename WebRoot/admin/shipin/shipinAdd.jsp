@@ -73,7 +73,7 @@
 </head>
 
 <body leftmargin="2" topmargin="9" background='<%=path %>/img/allbg.gif'>
-<form action="<%=path %>/yinyueAdd1.action" name="formAdd" method="post">
+<form action="<%=path %>/shipinAdd1.action" name="formAdd" method="post">
     <table width="98%" align="center" border="0" cellpadding="4" cellspacing="1" bgcolor="#CBD8AC" style="margin-bottom:8px">
         <tr bgcolor="#EEF4EA">
             <td colspan="3" background="<%=path %>/img/wbg.gif" class='title'><span></span></td>

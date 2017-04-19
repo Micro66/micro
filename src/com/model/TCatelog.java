@@ -43,12 +43,12 @@ public class TCatelog implements java.io.Serializable
 	}
 	
 
-	public List getYinyueList()
+	public List getShipinList()
 	{
 		return yinyueList;
 	}
 
-	public void setYinyueList(List yinyueList)
+	public void setShipinList(List yinyueList)
 	{
 		this.yinyueList = yinyueList;
 	}

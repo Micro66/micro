@@ -166,31 +166,31 @@
         </action>
         
         
-        <action name="yinyueAdd" class="yinyueAction" method="yinyueAdd">
+        <action name="shipinAdd" class="shipinAction" method="shipinAdd">
         </action>
-        <action name="yinyueAdd1" class="yinyueAction" method="yinyueAdd1">
+        <action name="shipinAdd1" class="shipinAction" method="shipinAdd1">
         </action>
-        <action name="yinyueDel" class="yinyueAction" method="yinyueDel">
+        <action name="shipinDel" class="shipinAction" method="shipinDel">
         </action>
-        <action name="yinyuePiZhun" class="yinyueAction" method="yinyuePiZhun">
+        <action name="shipinPiZhun" class="shipinAction" method="shipinPiZhun">
         </action>
-        <action name="yinyueMana" class="yinyueAction" method="yinyueMana">
-            <result name="success">/admin/yinyue/yinyueMana.jsp</result>
+        <action name="shipinMana" class="shipinAction" method="shipinMana">
+            <result name="success">/admin/shipin/shipinMana.jsp</result>
         </action>
-                <action name="yinyueShenqingMana" class="yinyueAction" method="yinyueShenqingMana">
-            <result name="success">/admin/yinyue/yinyueShenqingMana.jsp</result>
+                <action name="shipinShenqingMana" class="shipinAction" method="shipinShenqingMana">
+            <result name="success">/admin/shipin/shipinShenqingMana.jsp</result>
         </action>
-        <action name="yinyueDetailQian" class="yinyueAction" method="yinyueDetailQian">
-            <result name="success">/qiantai/yinyue/yinyueDetailQian.jsp</result>
+        <action name="shipinDetailQian" class="shipinAction" method="shipinDetailQian">
+            <result name="success">/qiantai/shipin/shipinDetailQian.jsp</result>
         </action>
-        <action name="yinyueMoreByCatelog" class="yinyueAction" method="yinyueMoreByCatelog">
-            <result name="success">/qiantai/yinyue/yinyueMoreByCatelog.jsp</result>
+        <action name="shipinMoreByCatelog" class="shipinAction" method="shipinMoreByCatelog">
+            <result name="success">/qiantai/shipin/shipinMoreByCatelog.jsp</result>
         </action>
-        <action name="yinyueSearch" class="yinyueAction" method="yinyueSearch">
-            <result name="success">/qiantai/yinyue/yinyueSearch.jsp</result>
+        <action name="shipinSearch" class="shipinAction" method="shipinSearch">
+            <result name="success">/qiantai/shipin/shipinSearch.jsp</result>
         </action>
-        <action name="yinyuePaihang" class="yinyueAction" method="yinyuePaihang">
-            <result name="success">/qiantai/yinyue/yinyuePaihang.jsp</result>
+        <action name="shipinPaihang" class="shipinAction" method="shipinPaihang">
+            <result name="success">/qiantai/shipin/shipinPaihang.jsp</result>
         </action>
     </package>
 </struts>
