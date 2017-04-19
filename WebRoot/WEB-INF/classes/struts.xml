@@ -24,11 +24,6 @@
         </action>
         
         
-        <action name="indexZJ" class="indexZJAction" method="index">
-            <result name="success">/qiantai/indexGoods.jsp</result>
-        </action>
-        
-        
         <action name="userReg" class="userAction" method="userReg">
         </action>
         <action name="userEdit" class="userAction" method="userEdit">
@@ -86,44 +81,7 @@
         
         
         
-               <action name="goodsNoTejiaAdd" class="goodsAction" method="goodsNoTejiaAdd">
-        </action>
-        <action name="goodsNoTejiaDel" class="goodsAction" method="goodsNoTejiaDel">
-        </action>
-        <action name="goodsManaNoTejia" class="goodsAction" method="goodsManaNoTejia">
-            <result name="success">/admin/goods/goodsManaNoTejia.jsp</result>
-        </action>
-        <action name="goodsNoTejiaEditPre" class="goodsAction" method="goodsNoTejiaEditPre">
-            <result name="success">/admin/goods/goodsNoTejiaEditPre.jsp</result>
-        </action>
-        <action name="goodsNoTejiaEdit" class="goodsAction" method="goodsNoTejiaEdit">
-            <result name="success">/admin/goods/goodsNoTejiaEdit.jsp</result>
-        </action>
-        <action name="goodsShezhiTejia" class="goodsAction" method="goodsShezhiTejia">
-            <result name="success">/common/succ.jsp</result>
-        </action>
-        <action name="goodsKucun" class="goodsAction" method="goodsKucun">
-            <result name="success">/admin/goods/goodsKuncun.jsp</result>
-        </action>
-        <action name="goodsRuku" class="goodsAction" method="goodsRuku">
-            <result name="success">/common/succ.jsp</result>
-        </action>
-        <action name="goodsDetailHou" class="goodsAction" method="goodsDetailHou">
-            <result name="success">/admin/goods/goodsDetailHou.jsp</result>
-        </action>
-        <action name="goodsDetail" class="goodsAction" method="goodsDetail">
-            <result name="success">/qiantai/goods/goodsDetail.jsp</result>
-        </action>
-        <action name="goodsAllYesTejia" class="goodsAction" method="goodsAllYesTejia">
-            <result name="success">/qiantai/goods/goodsAllYesTejia.jsp</result>
-        </action>
-        <action name="goodsAllNoTejia" class="goodsAction" method="goodsAllNoTejia">
-            <result name="success">/qiantai/goods/goodsAllNoTejia.jsp</result>
-        </action>
-        
-        
-        
-        
+
         <action name="catelogMana" class="catelogAction" method="catelogMana">
              <result name="success">/admin/catelog/catelogMana.jsp</result>
         </action>
@@ -135,35 +93,7 @@
              <result name="success">/qiantai/catelog/catelogAll.jsp</result>
         </action>
         
-                
-        <action name="testCart" class="buyAction" method="testCart">
-        </action>
-        <action name="addToCart" class="buyAction" method="addToCart">
-        </action>
-        <action name="myCart" class="buyAction" method="myCart">
-            <result name="success">/qiantai/myCart/myCart.jsp</result>
-        </action>
-        <action name="orderQueren" class="buyAction" method="orderQueren">
-            <result name="success">/qiantai/order/orderQueren.jsp</result>
-        </action>
-        <action name="orderSubmit" class="buyAction" method="orderSubmit">
-            <result name="success">/qiantai/order/orderSubmit.jsp</result>
-        </action>
-        <action name="myOrder" class="buyAction" method="myOrder">
-            <result name="success">/qiantai/order/myOrder.jsp</result>
-        </action>
-        <action name="orderDetail" class="buyAction" method="orderDetail">
-            <result name="success">/qiantai/order/orderDetail.jsp</result>
-        </action>
-        <action name="orderDel" class="buyAction" method="orderDel">
-        </action>
-        <action name="orderMana" class="buyAction" method="orderMana">
-            <result name="success">/admin/order/orderMana.jsp</result>
-        </action>
-        <action name="orderDelByAd" class="buyAction" method="orderDelByAd">
-        </action>
-        <action name="orderShouli" class="buyAction" method="orderShouli">
-        </action>
+
         
         
         <action name="shipinAdd" class="shipinAction" method="shipinAdd">

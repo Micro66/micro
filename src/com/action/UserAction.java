@@ -7,9 +7,7 @@ import org.apache.struts2.ServletActionContext;
 
 import com.dao.TUserDAO;
 import com.model.TUser;
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
-import com.util.Cart;
 
 public class UserAction extends ActionSupport
 {
@@ -86,11 +84,6 @@ public class UserAction extends ActionSupport
 			Map session= ServletActionContext.getContext().getSession();
 			TUser user=(TUser)userList.get(0);
 			session.put("user", user);
-
-
-			Cart cart=new Cart();
-			session.put("cart", cart);
-
 			this.setMessage("成功登录");
 			this.setPath("qiantai/default.jsp");
 		}
